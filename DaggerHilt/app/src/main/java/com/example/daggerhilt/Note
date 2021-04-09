@@ -1,0 +1,5 @@
+====================================
+
+ @Inject-------For code you own
+ @Binds------For injecting interface
+ @Provides-------For code you don't own
