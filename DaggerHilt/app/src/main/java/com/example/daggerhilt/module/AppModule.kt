@@ -27,8 +27,14 @@ class AppModule{
 
     @Provides
     @Singleton
-    fun getOne():One{
-        return ImplementOne()
+    fun getString():String{
+        return "Rajesh"
+    }
+
+    @Provides
+    @Singleton
+    fun getOne(name:String):One{
+        return ImplementOne(name)
     }
 }
 /*

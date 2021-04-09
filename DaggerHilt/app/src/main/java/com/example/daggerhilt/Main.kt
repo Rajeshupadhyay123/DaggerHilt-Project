@@ -1,9 +1,6 @@
 package com.example.daggerhilt
 
 import android.util.Log
-import dagger.Module
-import dagger.hilt.InstallIn
-import dagger.hilt.components.SingletonComponent
 import javax.inject.Inject
 
 interface One{
@@ -11,9 +8,9 @@ interface One{
     fun getName()
 }
 
-class ImplementOne @Inject constructor(): One{
+class ImplementOne @Inject constructor(private val name:String): One{
     override fun getName() {
-        Log.i("car", "my name  is prince")
+        Log.i("car", "my name  is $name")
     }
 
 }
